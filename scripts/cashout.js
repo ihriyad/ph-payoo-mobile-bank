@@ -26,7 +26,8 @@ document.getElementById("btn-cash-out").addEventListener("click", function () {
   const cashOutNumInput = document.getElementById("cash-out-number");
   const cashOutNum = cashOutNumInput.value;
   if (cashOutNum.length !== 11) {
-    alert("Invalid number");
+    showAlert("Number Must be 11 Digit ", "warning");
+    return;
   }
 
   //2
