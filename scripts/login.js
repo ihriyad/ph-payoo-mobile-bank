@@ -21,7 +21,7 @@ document.getElementById("btn-login").addEventListener("click", function () {
   const pin = inputPin.value;
 
   if (number === "0134567899" && pin === "1234") {
-    window.location.assign("/home.html");
+    window.location.replace("home.html");
   } else if (number === "" || pin === "") {
     showAlert("Please fill all fields!", "warning");
   } else if (pin.length < 4) {
