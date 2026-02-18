@@ -19,17 +19,21 @@ document.getElementById("btn-login").addEventListener("click", function () {
   const inputPin = document.getElementById("input-pin");
   const pin = inputPin.value;
 
-  if (number === "00000000000" && pin === "0000") {
-    window.location.replace("home.html");
-  } else if (number === "" || pin === "") {
+  if (number === "" || pin === "") {
     showAlert("Please fill all fields!", "warning");
   } else if (pin.length !== 4) {
     showAlert("Pin must be at least 4 characters!", "warning");
   } else if (number.length !== 11) {
     showAlert("Number must be at least 11 characters!", "warning");
-  } else if (number !== "0134567899" || pin !== "1234") {
-    showAlert("Invalid Number or Pin", "error");
+  } else if (number === "00011122200" && pin === "1010") {
+    window.location.replace("home.html");
+  } else {
+    showAlert("Wrong Number or Pin", "error");
+    return;
   }
 
-  return;
+  const reset = document.getElementsByClassName("reset");
+  for (const item of reset) {
+    item.value = "";
+  }
 });
