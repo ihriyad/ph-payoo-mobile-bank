@@ -42,7 +42,7 @@
             <img src="./assets/logo.png" alt="" />
           </div>
           <div>
-            <h2 class="font-bold">$<span id="balance">4500</span></h2>
+            <h2 class="font-bold">$<span id="currant-balance">4500</span></h2>
             <p class="text-neutral/50 text-[14px]">Available Balance</p>
           </div>
         </div>
@@ -56,7 +56,8 @@
       </section>
     </header>
     <main>
-      <section class="welcome w-11/12 mx-auto p-3 py-10 space-y-3">
+      <!-- home  -->
+      <section class="welcome w-11/12 mx-auto p-3 pt-10 space-y-3">
         <h2 class="text-3xl font-bold">
           Welcome to Pay<span class="text-primary">oo</span>
         </h2>
@@ -92,6 +93,56 @@
           </button>
         </div>
       </section>
+      <!-- cash out  -->
+      <section class="cash-out w-11/12 mx-auto p-3 space-y-3">
+        <h2 class="font-semibold text-[18px]">Cash Out</h2>
+          <div id="alertBox"></div>
+
+        <fieldset
+          class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-8 space-y-2"
+        >
+          <!--inputs-->
+          <label class="label text-neutral font-medium text-[16px]"
+            >Agent Number</label
+          >
+          <input
+            id="cash-out-number"
+            type="text"
+            class="input rounded-full bg-base-200"
+            maxlength="11"
+            placeholder="Enter agent number"
+          />
+          <label class="label text-neutral font-medium text-[16px]"
+            >Enter Amount</label
+          >
+          <input
+            id="cash-out-amount"
+            type="text"
+            class="input rounded-full bg-base-200"
+            maxlength="11"
+            placeholder="Enter amount to Withdraw"
+          />
+
+          <label class="label text-neutral font-medium text-[16px]"
+            >Pin Number</label
+          >
+          <input
+            id="cash-out-pin"
+            type="password"
+            class="input rounded-full bg-base-200"
+            placeholder="Enter 4 Digit Pin"
+            maxlength="4"
+          />
+
+          <button
+            id="btn-cash-out"
+            class="btn btn-primary mt-4 rounded-full font-semibold text-[20px]"
+          >
+            Withdraw Money
+          </button>
+        </fieldset>
+      </section>
     </main>
+    <script src="./scripts/cashout.js"></script>
   </body>
 </html>
