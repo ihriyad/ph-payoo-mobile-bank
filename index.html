@@ -39,6 +39,41 @@
       <section
         class="login-container min-h-screen bg-base-200 max-w-md mx-auto"
       >
+        <!-- alert success  -->
+        <div role="alert" id="alert-box" class="alert alert-success hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 shrink-0 stroke-current"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <span id="alert-text">Login successful</span>
+        </div>
+        <!-- alert error  -->
+        <div role="alert" id="alert-box2" class="alert alert-error hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-6 w-6 shrink-0 stroke-current"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
+          </svg>
+          <span>Error! Wrong number or pin</span>
+        </div>
+        <!-- img  -->
         <figure class="mx-auto w-[250px] pt-[210px] md:pt-[128px]">
           <img src="./assets/Logo-full.png" alt="" />
         </figure>
@@ -48,6 +83,7 @@
         >
           <label class="label text-neutral">Mobile Number</label>
           <input
+            id="input-number"
             type="text"
             class="input rounded-full bg-base-200"
             maxlength="11"
@@ -56,18 +92,19 @@
 
           <label class="label text-neutral">4 Digit Pin</label>
           <input
+            id="input-pin"
             type="password"
             class="input rounded-full bg-base-200"
             placeholder="Enter 4 Digit Pin"
             maxlength="4"
           />
 
-          <button class="btn btn-primary mt-4 rounded-full">
+          <button id="btn-login" class="btn btn-primary mt-4 rounded-full">
             Login
           </button>
         </fieldset>
       </section>
     </main>
-    <script src="login.js"></script>
+    <script src="./scripts/login.js"></script>
   </body>
 </html>
