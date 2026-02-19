@@ -30,8 +30,10 @@ document
       showAlert("Send Money Success!", "success");
       // set balance
       setBalance(newBalance);
+      history();
     } else {
       showAlert("Wrong pin", "error");
       return;
     }
+    setAgain();
   });

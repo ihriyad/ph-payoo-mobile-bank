@@ -1,4 +1,3 @@
-
 document.getElementById("btn-login").addEventListener("click", function () {
   const inputNumber = document.getElementById("input-number");
   const number = inputNumber.value;
@@ -20,9 +19,5 @@ document.getElementById("btn-login").addEventListener("click", function () {
   } else {
     showAlert("Wrong Number or Pin", "error");
   }
-  const reset = document.getElementsByClassName("reset");
-  for (const item of reset) {
-    item.value = "";
-  }
-  return;
+  setAgain();
 });

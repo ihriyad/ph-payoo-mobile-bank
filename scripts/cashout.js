@@ -35,14 +35,11 @@ document.getElementById("btn-cash-out").addEventListener("click", function () {
   if (pin === "0000") {
     showAlert("Cash out Success!", "success");
     setBalance(newBalance);
+    history();
   } else {
     showAlert("Wrong pin", "error");
   }
-  const reset = document.getElementsByClassName("reset");
-  for (const item of reset) {
-    item.value = "";
-  }
-  return;
+  setAgain();
 });
 
 /**

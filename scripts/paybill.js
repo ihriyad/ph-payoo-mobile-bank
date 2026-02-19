@@ -34,8 +34,10 @@ document.getElementById("btn-pay-bill").addEventListener("click", function () {
     showAlert("Payment Successful!", "success");
     // set balance
     setBalance(newBalance);
+    history();
   } else {
     showAlert("Wrong pin", "error");
     return;
   }
+  setAgain();
 });

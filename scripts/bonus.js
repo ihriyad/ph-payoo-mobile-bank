@@ -10,7 +10,9 @@ document.getElementById("btn-bonus").addEventListener("click", function () {
     showAlert("Redeem Success", "success");
     const newBalance = balance + 500;
     setBalance(newBalance);
+    history();
   } else {
     showAlert("Invalid Coupon", "error");
   }
+  setAgain();
 });

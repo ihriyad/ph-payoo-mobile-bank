@@ -34,8 +34,10 @@ document.getElementById("btn-add-money").addEventListener("click", function () {
     showAlert("Add Money Success!", "success");
     // set balance
     setBalance(newBalance);
+    history();
   } else {
     showAlert("Wrong pin", "error");
     return;
   }
+  setAgain();
 });
