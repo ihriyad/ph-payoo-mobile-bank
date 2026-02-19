@@ -1,16 +1,3 @@
-function showAlert(message, type) {
-  const alertBox = document.getElementById("alertBox");
-
-  alertBox.innerHTML = `
-    <div class="alert alert-${type} mb-4">
-      <span>${message}</span>
-    </div>
-  `;
-
-  setTimeout(() => {
-    alertBox.innerHTML = "";
-  }, 3500);
-}
 
 document.getElementById("btn-cash-out").addEventListener("click", function () {
   //1
