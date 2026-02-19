@@ -54,6 +54,8 @@
           </button>
         </div>
       </section>
+      <!-- alertBox  -->
+      <div id="alertBox" class="sticky top-1 z-5"></div>
     </header>
     <main>
       <!-- home  -->
@@ -63,7 +65,7 @@
         </h2>
         <p class="text-neutral/50 text-[16px]">
           Enjoy easy and convenient financial services with us. Cash-out charge
-          is low and
+          is efficient and send money all over the world!
         </p>
         <!-- buttons  -->
         <div class="buttons grid grid-cols-3 gap-3 mt-[24px]">
@@ -96,8 +98,8 @@
       <!-- Add money  -->
       <section class="add-money w-11/12 mx-auto p-3 space-y-3">
         <h2 class="font-semibold text-[18px]">Add Money</h2>
-        <div id="alertBox"></div>
 
+        <!-- form  -->
         <fieldset
           class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-8 space-y-2"
         >
@@ -116,14 +118,14 @@
             >Bank Account Number</label
           >
           <input
-            id="add-money-amount"
+            id="bank-number"
             type="text"
             class="input reset rounded-full bg-base-200"
             maxlength="11"
             placeholder="Enter 11 digit account number"
           />
 
-          <label class="label text-neutral font-medium text-[16px]"
+          <label class="label reset text-neutral font-medium text-[16px]"
             >Amount to Add</label
           >
           <input
@@ -145,7 +147,7 @@
           />
 
           <button
-            id="btn-cash-out"
+            id="btn-add-money"
             class="btn btn-primary mt-4 rounded-full font-semibold text-[20px]"
           >
             Add Money
@@ -155,8 +157,8 @@
       <!-- cash out  -->
       <section class="cash-out w-11/12 mx-auto p-3 space-y-3">
         <h2 class="font-semibold text-[18px]">Cash Out</h2>
-        <div id="alertBox"></div>
 
+        <!-- form  -->
         <fieldset
           class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-8 space-y-2"
         >
@@ -204,8 +206,8 @@
       <!-- transfer money  -->
       <section class="transfer-money w-11/12 mx-auto p-3 space-y-3">
         <h2 class="font-semibold text-[18px]">Transfer Money</h2>
-        <div id="alertBox"></div>
 
+        <!-- form  -->
         <fieldset
           class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-8 space-y-2"
         >
@@ -243,7 +245,7 @@
           />
 
           <button
-            id="btn-cash-out"
+            id="btn-transfer-money"
             class="btn btn-primary mt-4 rounded-full font-semibold text-[20px]"
           >
             Send Now
@@ -261,13 +263,13 @@
             >Enter Bonus Coupon</label
           >
           <input
-            id="transfer-money-number"
+            id="get-bonus-cupon"
             type="text"
             class="input rounded-full bg-base-200"
             placeholder="Enter your coupon"
           />
           <button
-            id="btn-cash-out"
+            id="btn-bonus"
             class="btn btn-primary mt-4 rounded-full font-semibold text-[20px]"
           >
             Get Bonus
@@ -277,8 +279,8 @@
       <!-- pay bill  -->
       <section class="transfer-money w-11/12 mx-auto p-3 space-y-3">
         <h2 class="font-semibold text-[18px]">Pay Bill</h2>
-        <div id="alertBox"></div>
 
+        <!-- form  -->
         <fieldset
           class="fieldset bg-base-100 border-base-300 rounded-2xl w-full border p-8 space-y-2"
         >
@@ -327,7 +329,7 @@
           />
 
           <button
-            id="btn-cash-out"
+            id="btn-pay-bill"
             class="btn btn-primary mt-4 rounded-full font-semibold text-[20px]"
           >
             Pay Now
@@ -352,7 +354,9 @@
               <p class="text-neutral/50 text-[14px]">Today 01:44 AM</p>
             </div>
           </div>
-          <button id="elipsis" class="right"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+          <button id="elipsis" class="right">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
         </div>
       </section>
     </main>
