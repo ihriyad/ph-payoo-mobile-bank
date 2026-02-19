@@ -4,13 +4,13 @@ document.getElementById("btn-cash-out").addEventListener("click", function () {
   const cashOutNum = getValueFromInput("cash-out-number");
 
   //2
-  const cashOutAmount = getValueFromInput("cash-out-amount");
+  const cashOutAmount = Number(getValueFromInput("cash-out-amount"))
 
   //3
   const balance = getBalance("currant-balance");
 
   //4
-  const newBalance = Number(balance) - Number(cashOutAmount);
+  const newBalance = balance - cashOutAmount;
 
   //5
   const pin = getValueFromInput("cash-out-pin");
