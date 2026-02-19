@@ -31,3 +31,16 @@ function showAlert(message, type) {
     alertBox.innerHTML = "";
   }, 3500);
 }
+//
+// function toShow (id){
+//   const section = document.getElementById(id);
+//   const removeHidden =section.classList.remove('hidden')
+//   return removeHidden;
+// }
+function toShow(id) {
+  document
+    .querySelectorAll(".section")
+    .forEach((sec) => sec.classList.add("hidden"));
+
+  document.getElementById(id).classList.remove("hidden");
+}

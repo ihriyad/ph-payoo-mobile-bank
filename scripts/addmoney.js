@@ -25,8 +25,8 @@ document.getElementById("btn-add-money").addEventListener("click", function () {
     showAlert("Account number must be 10 digit", "warning");
     return;
   }
-  if(addedAmount > 100000){
-    showAlert('Limitation Reached ,Reduce amount', 'warning')
+  if (addedAmount > 100000) {
+    showAlert("Limitation Reached ,Reduce amount", "warning");
     return;
   }
   if (pin === "0000") {

@@ -1,10 +1,9 @@
-
 document.getElementById("btn-cash-out").addEventListener("click", function () {
   //1
   const cashOutNum = getValueFromInput("cash-out-number");
 
   //2
-  const cashOutAmount = Number(getValueFromInput("cash-out-amount"))
+  const cashOutAmount = Number(getValueFromInput("cash-out-amount"));
 
   //3
   const balance = getBalance("currant-balance");
@@ -20,15 +19,22 @@ document.getElementById("btn-cash-out").addEventListener("click", function () {
   if (cashOutNum === "" || cashOutAmount === "" || pin === "") {
     showAlert("Please fill all fields!", "warning");
     return;
-  } else if (cashOutNum.length !== 11) {
+  }
+  if (cashOutNum.length !== 11) {
     showAlert("Number Must be 11 Digit ", "warning");
     return;
-  } else if (newBalance < 10) {
+  }
+  if (cashOutAmount > balance) {
+    showAlert("Not Enough Balance", "warning");
+    return;
+  }
+  if (newBalance < 10) {
     showAlert("Insufficient Amount ", "warning");
     return;
-  } else if (pin === "0000") {
+  }
+  if (pin === "0000") {
     showAlert("Cash out Success!", "success");
-    setBalance(newBalance)
+    setBalance(newBalance);
   } else {
     showAlert("Wrong pin", "error");
   }
